@@ -1,16 +1,33 @@
 {
   "name": "baselib",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",
-    "babel-loader": "^8.0.5"
-  }
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "vue-template-compiler": "^2.6.6",
+    "webpack-cli": "^3.2.3"
+  },
+  "dependencies": {
+    "vue": "^2.6.6",
+    "vue-loader": "^15.6.2",
+    "webpack": "^4.29.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aggie123/baseLib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Aggie123/baseLib/issues"
+  },
+  "homepage": "https://github.com/Aggie123/baseLib#readme",
+  "description": ""
 }

@@ -1,14 +1,9 @@
-console.log('index js');
+import Vue from 'vue'
+import App from './app.vue'
 
-//1. 
+const root = document.createElement('div')
+document.body.appendChild(root)
 
-function test(){
-	var a =1;
-	let b =2;
-	a++;
-	b++;
-	console.log('1',a,b);
-	return a;
-}
-
-console.log('2',test());
+new Vue({
+    render: (h) => h(App)
+}).$mount(root)
