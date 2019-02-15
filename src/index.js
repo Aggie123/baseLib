@@ -1,9 +1,15 @@
 import Vue from 'vue'
-import App from './app.vue'
-
-const root = document.createElement('div')
-document.body.appendChild(root)
+import routes from './routes.vue'
 
 new Vue({
-    render: (h) => h(App)
-}).$mount(root)
+  el: '#app',
+  data: {
+    currentRoute: window.location.pathname
+  },
+  computed: {
+    ViewComponent () {
+      return routes[this.currentRoute] || NotFound
+    }
+  },
+  render (h) { return h(this.ViewComponent) }
+})

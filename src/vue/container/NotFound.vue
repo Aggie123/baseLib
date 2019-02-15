@@ -4,7 +4,7 @@
 <script>
     export default {
         data () {
-            text: '闰土大叔'
+            text: 'Page not found'
         }
     }
 </script>

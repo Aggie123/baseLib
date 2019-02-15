@@ -1,5 +1,6 @@
 const path = require('path')
 const { VueLoaderPlugin } = require('vue-loader')
+// const isDev = process.env.NODE_ENV === 'development'
 
 module.exports = {
     entry:  path.join(__dirname, 'src/index.js'),
@@ -7,7 +8,7 @@ module.exports = {
         filename: 'bundle.js',
         path: path.join(__dirname, 'dist')
     },
-    // mode: 'development',
+    mode: 'development', //development,production
 	  module: {
 	    rules: [
 	      {
