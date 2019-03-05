@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
 <head>
 	<meta charset="UTF-8">
 	<title>js</title>
+	<style type="text/css">
+		.item{
+			width:100px;
+			height:40px;
+			background-color: #fdd;
+		}
+	</style>
 </head>
 <body>
 	<div>hello1</div>
-	<script src="./scope.js"></script>
-	<!-- <script src="./oof.js"></script> -->
+	<!-- 1. 点击事件： 重复该节点内容repeat-count次，并更新到该节点上 -->
+	<ul class="list">
+		<li class="item" repeat-count="1" onclick=repeatThis()>a</li>
+		<li class="item" repeat-count="2" onclick=repeatThis()>b</li>
+		<li class="item" repeat-count="3" onclick=repeatThis()>c</li>
+	</ul>
+
+	<!-- 1. 点击事件： 重复该节点内容repeat-count次，并更新到该节点上 -->
+	<ul class="list" id="list2">
+		<li class="item2">a</li>
+		<li class="item2">b</li>
+		<li class="item2">c</li>
+	</ul>
+
+
+	<!-- <script src="./scope.js"></script> -->
+	<!-- 	<script src="./reg.js"></script> -->	
+  <!-- <script src="./oof.js"></script> -->
+  <script type="text/javascript" src="./click.js"></script>
 </body>
 </html>
