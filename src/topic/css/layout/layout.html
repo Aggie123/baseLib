@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>页面布局</title>
+</head>
+<style>
+	.left{
+		float: left;
+		width: 50%;
+		background-color: #fdd;
+	}
+	.right{
+		float: right;
+		width: 50%;
+		background-color: #dff;
+	}
+	.box{
+		flex: 1;
+		margin-left: 10px;
+		background-color: #fdd;
+		/*height: 50px;*/
+	}
+	.sub-title{
+		flex:1;
+	}
+	.active{
+		background-color: #fdd;
+	}
+</style>
+<body>
+	<div>
+		<h1>title</h1>
+		<div class="left">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+		<div class="right">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div>
+	</div>
+
+	<div>
+		<h1>title1</h1>
+		<div class="left">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+		<div id='content1' style="word-wrap:break-word">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div>
+	</div>
+
+	<section style="display: flex; height:100px">
+		<div class="box">box1</div>
+		<div class="box">box2</div>
+		<div class="box">box3</div>
+	</section>
+
+	<section style="display: flex; height:50px; background-color: #aaa">
+		<div class="sub-title active">sub-title1</div>
+		<div class="sub-title">sub-title2</div>
+		<div class="sub-title">sub-title3</div>
+	</section>
+</body>
+<script>
+	function repeatStr(str,count){
+		return str.repeat(count)
+	}
+
+	let content1 = document.getElementById('content1');
+	content1.innerHTML=repeatStr('content',100)
+
+
+</script>
+</html>
