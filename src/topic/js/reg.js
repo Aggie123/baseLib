@@ -28,7 +28,7 @@ let str = ' hello there sunglasses a b c !  '
 console.log(removeEmpty(str))
 console.log(removeFirstLastEmpty(str))
 console.log(removeFirstEmpty(str))
-console.log(removeLastEmpty(str))
+console.log(removeLastEmpty(str)) 
 
 //5. 将字符串非控制符放在数组中 - 用空格或多个空格分隔
 console.log(str.split(/\s*/))
