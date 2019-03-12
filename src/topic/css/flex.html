@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flex</title>
+</head>
+<style>
+	.flex-container{
+		display: flex;
+		width: 100%;
+		height: 100px;
+		background-color: #fdd;
+		margin-bottom: 10px;
+	}
+
+	.vcenter{
+		align-items: center;
+	}
+
+	.hcenter{
+		justify-content: center;
+	}
+
+	.vhcenter{
+		align-items: center;
+		justify-content: center;
+	}
+
+	.flex1{
+		background-color: #edf;
+		flex: 1;
+	}
+</style>
+<body>
+	<!-- flex内容居中问题：justifyContent水平居中，align-items垂直居中 -->
+	<div class="flex-container vcenter">
+		<div class="">vcenter</div>
+	</div>
+
+	<div class="flex-container hcenter">
+		<div class="">hcenter</div>
+	</div>
+
+	<div class="flex-container vhcenter">
+		<div class="">hvcenter</div>
+	</div>
+
+	<div class="flex-container">
+		<div class="flex1" style="background-color: #ccc">1</div>
+		<div class="flex1" style="background-color: #1de">2</div>
+		<div class="flex1" style="background-color: #9de">3</div>
+	</div>
+
+	<div class="flex-container" style="flex-direction: column;">
+		<div class="flex1" style="background-color: #ccc">1</div>
+		<div class="flex1" style="background-color: #1de">2</div>
+		<div class="flex1" style="background-color: #9de">3</div>
+	</div>
+</body>
+</html>
