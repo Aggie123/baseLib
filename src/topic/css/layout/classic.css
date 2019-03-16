@@ -1,0 +1,93 @@
+/*1. flex*/
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body,#app{
+	height:100%;
+	margin:0;
+	padding: 0;
+}
+.header, .footer{
+	background-color: #fdc;
+	height:50px;
+}
+.sider{
+	background-color: #ccc;
+	width:200px;
+}
+li{
+	list-style: none;
+	display: inline-block;
+	margin-left: 20px
+}
+/*此方法不行，br的缘故，并没有在1，4后面，而是1，5*/
+/*li:nth-child(2n){
+	border-right: 1px solid #ccc;
+}*/
+ul li:nth-of-type(2n)::after{
+	content: '|'
+}
+
+/*1. flex*/
+/*#app{
+	display:flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+}
+.header, .footer{
+	flex-basis: 100%;
+}
+.sider{
+	height: calc(100% - 100px);
+}
+.main{
+	flex:1;
+	height: calc(100% - 100px);
+}*/
+
+/*2. position*/
+/*.sider{
+	height: calc(100% - 100px);
+}
+.main{
+	position: absolute;
+	left:200px;
+	top:50px;
+	height:calc(100% - 100px);
+}*/
+
+/*3. float*/
+/*.sider{
+	float:left;
+	height: calc(100% - 100px);
+}
+.main{
+	margin-left: 200px;
+	height: calc(100% - 100px);
+}*/
+
+/*4. grid*/
+#app{
+	display: grid;
+	/*grid-template-rows: 50px auto 50px;
+	grid-template-columns: 200px auto;
+	grid-template-areas:
+		"header header"
+		"sider main"
+		"footer footer";*/
+	grid: 'header header' 50px 'sider main' auto 'footer footer' 50px/200px auto; /*footer width 100%*/
+	/*grid: 'header header' 50px 'sider main' auto 'sider footer' 50px/200px auto;*/ /*footer width=main*/
+}
+.header{
+	grid-area: header ;
+}
+.footer{
+	grid-area: footer ;
+}
+.sider{
+	grid-area: sider ;
+}
+.main{
+	grid-area: main ;
+}
