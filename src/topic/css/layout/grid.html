@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>grid</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		html,body,#app{
+			margin:0;
+			padding:0;
+			height:100%;
+		}
+		#app{
+			display: grid;
+			grid: 'header header' 50px 'nav nav' 50px 'section aside' 3fr 'article aside' 1fr 'footer footer' 50px/4fr 1fr;
+		}
+		#app > header{
+			grid-area:header;
+			background-color: #fdc;
+		}
+		#app > nav{
+			grid-area:nav;
+			background-color: #34f;
+		}
+		#app > section{
+			grid-area:section;
+			background-color: #ed2;
+		}
+		#app > article{
+			grid-area:article;
+		}
+		#app > aside{
+			grid-area:aside;
+			background-color: #ccc;
+		}
+		#app > footer{
+			grid-area:footer;
+			background-color: #fdc;
+		}
+	</style>
+</head>
+<body>
+	<section id="app">
+		<!-- <section class="a1"></section>
+		<section class="a2"></section>
+		<section class="a3"></section>
+		<section class="a4"></section>
+		<section class="a5"></section>
+		<section class="a6"></section> -->
+		<header>header</header>
+		<nav>nav</nav>
+		<section>section</section>
+		<article>article</article>
+		<aside>aside</aside>
+		<footer>footer</footer>
+	</section>
+</body>
+</html>
