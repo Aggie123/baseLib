@@ -4,11 +4,30 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<style>
+		html,body{
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
 		.out-box{
 			background-color: #f00;
+			margin-bottom: 10px;
 		}
 		.inner-box{
 			background-color: #fdd;
+			height: 100px;
+			width:20%;
+		}
+		.clearfloat{
+			overflow: hidden;
+		}
+		.clearfloat1:after{
+			display: block;
+			clear: both;
+			content: '';
+			visibility: hidden;
+			height: 0;
+
 		}
 		.fl{
 			float: left;
@@ -19,9 +38,16 @@
 	</style>
 </head>
 <body>
-	<div class="out-box">
+	<div class="out-box clearfloat">
 		<div class="inner-box fl"></div>
-		<div class="inner-box fr"></div>
+		<div class="inner-box fr" style="background-color: #3f4"></div>
 	</div>
+	<div style="background-color: #fd1">div2</div>
+
+	<div class="out-box clearfloat1">
+		<div class="inner-box fl"></div>
+		<div class="inner-box fr" style="background-color: #3f4"></div>
+	</div>
+	<div style="background-color: #fd1">div2</div>
 </body>
 </html>
