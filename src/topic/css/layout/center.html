@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>center</title>
+	<style>
+		html,body,#app{
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+		.o-box{
+			display: flex;
+			background-color: #ccc;
+			height: 200px;
+			margin-top: 10px;
+		}
+		.i-box{
+			width:50px;
+			height:80px;
+			background-color: #dff;
+			margin:20px;
+		}
+		.fl{
+			float: left;
+		}
+		.fr{
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="app">
+		<div class="o-box" style="align-items: center;justify-content: center;">
+			<div class="i-box"></div>
+			<div class="i-box"></div>
+		</div>
+
+		<div class="o-box" style="align-items: center;">
+			<div class="i-box"></div>
+			<div class="i-box"></div>
+		</div>
+
+		<div class="o-box" style="justify-content: center;">
+			<div class="i-box"></div>
+			<div class="i-box"></div>
+		</div>
+
+		<div class="o-box" style="justify-content: center;">
+			<div class="i-box"></div>
+			<div class="i-box"></div>
+		</div>
+
+		<div class="o-box" style="">
+			<div class="i-box fl"></div>
+			<div class="i-box fr"></div>
+		</div>
+	</div>
+</body>
+</html>

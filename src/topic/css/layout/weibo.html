@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Weibo</title>
+	<style>
+		body,ul,li{
+			margin: 0;
+			padding: 0;
+		}
+		.top{
+			display: flex;
+			height: 50px;
+			align-items: center;
+			border-bottom: 1px solid #eee;
+		}
+		.logo{
+			width:100px;
+			height: 50px;
+			line-height: 50px;
+			margin-left: 30px;
+			text-align: center;
+		}
+		.search{
+			height: 30px;
+			line-height: 30px;
+			width:600px;
+			margin: 0 20px;
+		}
+		.nav{
+			flex:1;
+			display: flex;
+			justify-content: flex-end;
+		}
+		.nav li{
+			list-style: none;
+			width: 60px;
+		}
+		.content{
+			display: flex;
+		}
+		.sider{
+			width:100px;
+			text-align: center;
+			line-height: 50px;
+			height: 50px;
+		}
+		.sider li{
+		}
+		.sider li:hover{
+			background-color: #f00;
+		}
+		.mid{
+			flex:1;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="top">
+			<div class="logo">Weibo</div>
+			<input type="text" class="search"/>
+			<ul class="nav">
+				<li>首页</li>
+				<li>视频</li>
+				<li>发现</li>
+				<li>游戏</li>
+				<li>注册</li>
+				<li>登录</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="sider">
+				<ul>
+					<li>热门</li>
+					<li>头条</li>
+					<li>视频</li>
+					<li>新鲜事</li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="mid">
+				<p>California cherries are the first cherries of the season which is why they are so eagerly anticipated around the world. The short California cherry season begins in mid-April and typically lasts into early June. Among major commercially-grown fruits, cherries are known to be the last trees to bloom and the first to harvest each year. In fact, rumor has it the term ‘in cherry condition’ has been derived because it means something new.</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

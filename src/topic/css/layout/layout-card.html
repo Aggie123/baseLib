@@ -3,8 +3,90 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style>
+		body,ul,li{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			height: 100%;
+		}
+		.container{
+			height:100%;
+		}
+		.nav{
+			display: flex;
+		}
+		li{
+			list-style: none;
+			flex: 1;
+			background-color: #000;
+			color: #fff;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+		}
+		li:hover{
+			background-color: #00d;
+		}
+		.content{
+			display: flex;
+			min-height: 100%;
+		}
+
+		.left{
+			width: 100px;
+			background-color: #ced;
+		}
+		.right{
+			flex:1;
+			background-color: #fdd;
+		}
+	</style>
 </head>
 <body>
-	div.
+	<div class="container">
+		<ul id='nav' class="nav">
+			<li>菜单1</li>
+			<li>菜单2</li>
+			<li>菜单3</li>
+			<li>菜单4</li>
+			<li>菜单5</li>
+			<li>菜单6</li>
+		</ul>
+
+		<div class="content">
+			<div class="left">left
+				<p></p>
+			</div>
+			<div class="right">
+				<p>这段代码为 passive 属性创建了一个带有getter函数的 options 对象；getter设定了一个标识， passiveSupported，被调用后就会把其设为true。那意味着如果浏览器检查 options 对象上的 passive 值时， passiveSupported 将会被设置为 true；否则它将保持 false。然后我们调用 addEventListener() 去设置一个指定这些选项的空事件处理器，这样如果浏览器将第三个参数认定为对象的话，这些选项值就会被检查。
+
+你可以利用这个方法检查options之中任一个值。只需使用与上面类似的代码，为选项设定一个getter。
+
+然后，当你想实际创建一个是否支持options的事件侦听器时，你可以这样做：</p>
+			</div>
+		</div>
+		
+	</div>
 </body>
+<script>
+	function onClick(e,i){
+		console.log(e,i)
+	}
+	let liItems=document.getElementsByTagName('li');
+
+	/*v1*/
+	for(let i=0;i<liItems.length;i++){
+		liItems[i].addEventListener('click',e=>onClick(e,i),false)
+	}
+
+	/*v2*/
+	Array.from(liItems).forEach((item,index)=>{
+		item.addEventListener('click',e=>onClick(e,index),false)
+	})
+
+	// document.getElementById('nav').onclick=onClick
+
+</script>
 </html>
