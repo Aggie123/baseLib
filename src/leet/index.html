@@ -13,11 +13,43 @@
 </head>
 <body>
 	<div>hello1</div>
-
+	<li class="item">11111</li>
+	<li class="item">22222</li>
+	<li class="item">33333</li>
+	<li class="item">44444</li>
 
 	<!-- <script src="./scope.js"></script> -->
 	<!-- 	<script src="./reg.js"></script> -->	
-  <script src="./p1.js"></script>
+  <!-- <script src="./p1.js"></script> -->
   <!-- <script type="text/javascript" src="./click.js"></script> -->
+  <script type="text/javascript">
+  	let liItems=document.getElementsByClassName('item');
+  	console.log(liItems)
+  	for(let i=0;i<liItems.length;i++){
+  		/*liItems[i].onclick=function(e){
+  			console.log(i,e)
+  		}(i)*/
+
+  		/*liItems[i].onclick=function () {
+  			return function(){
+  				console.log(i)
+  			}
+  		}(i)*/
+
+  		/*liItems[i].onclick=function () {
+  			return function(){
+  				console.log(i)
+  			}(i)
+  		}*/
+
+  		liItems[i].onclick=function () {
+  			return function(){
+  				console.log(i)
+  			}()
+  		}
+  	}
+  	// liItems.forEach((item,i)=>item.onClick=()=>console.log(i))
+
+  </script>
 </body>
 </html>

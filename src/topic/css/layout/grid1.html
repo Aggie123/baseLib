@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>grid</title>
+	<style type="text/css">
+		html,body,#app{
+			height:100%;
+			margin:0;
+			padding: 0;
+		}
+		#app{
+			display:grid;
+			grid:'a1 a2 a2' 1fr 'a1 a3 a4' 1fr 'a5 a3 a4' 1fr/1fr 1fr 1fr;
+		}
+		.a1{
+			grid-area:a1;
+			background-color: #fdd;
+		}
+		.a2{
+			grid-area:a2;
+			background-color: #1fd;
+		}
+		.a3{
+			grid-area:a3;
+			background-color: #d32;
+		}
+		.a4{
+			grid-area:a4;
+			background-color: #32f;
+		}
+		.a5{
+			grid-area:a5;
+			background-color: #f1d;
+		}
+	</style>
+</head>
+<body>
+	<section id="app">
+		<section class="a1"></section>
+		<section class="a2"></section>
+		<section class="a3"></section>
+		<section class="a4"></section>
+		<section class="a5"></section>
+	</section>
+</body>
+</html>
